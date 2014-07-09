@@ -1,28 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p class="lead text-center">
+<div class="container-fluid text-center">
+<h2>
   <strong>Name:</strong>
   <%= @amoeba.name %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Generation:</strong>
   <%= @amoeba.generation %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Talent:</strong>
   <%= @amoeba.talent.name%>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Act:</strong>
-  <%= @amoeba.act.name %>
-</p>
+  <%= link_to(@amoeba.act.name, @amoeba.act) %>
+</h3>
 
 <div>
-<%= link_to("SPLIT!!", amoeba_split_path) %>
+<br>
+<h2><%= link_to("SPLIT!!", amoeba_split_path) %></h2>
+<br>
+<br>
 </div>
 
 <%= link_to 'Edit', edit_amoeba_path(@amoeba) %> |
 <%= link_to 'Back', amoebas_path %>
+</div>
