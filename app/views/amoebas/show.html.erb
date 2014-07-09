@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<p class="lead text-center">
+  <strong>Name:</strong>
+  <%= @amoeba.name %>
+</p>
+
+<p>
+  <strong>Generation:</strong>
+  <%= @amoeba.generation %>
+</p>
+
+<p>
+  <strong>Talent:</strong>
+  <%= @amoeba.talent.name%>
+</p>
+
+<p>
+  <strong>Act:</strong>
+  <%= @amoeba.act.name %>
+</p>
+
+<div>
+<%= link_to("SPLIT!!", amoeba_split_path) %>
+</div>
+
+<%= link_to 'Edit', edit_amoeba_path(@amoeba) %> |
+<%= link_to 'Back', amoebas_path %>

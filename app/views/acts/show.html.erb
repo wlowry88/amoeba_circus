@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<p class="lead text-center">
+  <strong>Name:</strong>
+  <%= @act.name %>
+</p>
+
+<p>
+  <strong>Date and time:</strong>
+  <%= @act.date_and_time %>
+</p>
+
+<p>
+  <strong>Amoebas:</strong>
+  <ol>
+  <% @act.amoebas.each do |amoeba| %>
+  <li><%= amoeba.name %></li>
+  <% end %>
+  </ol>
+</p>
+
+<%= link_to 'Edit', edit_act_path(@act) %> |
+<%= link_to 'Back', acts_path %>
+</div>
